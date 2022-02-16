@@ -16,19 +16,25 @@
 
 
     <script>
+        let couleurs = ["red", "green", "blue", "yellow", "orange", "purple"];
         let i=5;
+        let j=1;
         function compteur() {
             setTimeout(() => {
+                $( "body" ).css( "background-color", couleurs[i] );
+                $( "#compteur" ).css( "font-size", 128*j);
                 $( "#compteur" ).html(i);
                 if(i!=0) {
                     compteur();
+                    
                 } else {
                     $( "#compteur" ).html( "<img src='assets/images/franquefort.png'>" );
                 }
-                i-=1;
+                i--;
+                j++;
             }, 1000);
         }
-        compteur();        
+        compteur();      
     </script>
 </body>
 </html>
