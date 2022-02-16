@@ -3,10 +3,14 @@ html, body {
     height: 100%;
 }
 
+body {
+    transition: background-color 1s
+}
+
 #compteur {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 128px;
+    transition: font-size 1s
 }
