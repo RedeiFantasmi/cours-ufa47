@@ -14,3 +14,8 @@ body {
     align-items: center;
     transition: font-size 1s
 }
+
+img {
+    max-height: 100%;
+    max-width: 100;
+}
