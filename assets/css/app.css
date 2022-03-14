@@ -7,15 +7,65 @@ body {
     transition: background-color 1s
 }
 
+* {
+    user-select: none;
+}
+
 #compteur {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: font-size 1s
+    transition: font-size 1s;
+    overflow: hidden;
 }
 
 img {
     max-height: 100%;
-    max-width: 100;
+    max-width: auto;
+}
+
+#left-side {
+    justify-content: flex-start;
+}
+#right-side {
+    justify-content: flex-end;
+}
+.side {
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    height: 100%;
+    width: 50%;
+    transition: background-color 0.5s, transform 0.5s;
+}
+.side > p {
+    display: none;
+    padding: 0 10%;
+}
+.side:hover {
+    background-color: aqua;
+    transform: scale(1.2);
+}
+.side:hover > p {
+    display: inline;
+}
+
+#result-container {
+    align-self: flex-start;
+    position: absolute;
+}
+#result-container > span {
+    font-size: 100px;
+}
+#retry-btn {
+    border: solid lightgray 1px;
+    background-color: aqua;
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    transition: background-color 0.25s, transform 0.25s;
+}
+#retry-btn:hover {
+    background-color: steelblue;
 }
